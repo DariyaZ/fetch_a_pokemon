@@ -1,9 +1,3 @@
-@font-face {
-  font-family: "Pixelated";
-  src: url("../fonts/pixelated/pixelated.ttf") format("truetype");
-  font-style: normal;
-  font-weight: normal; }
-
 body {
   background-color: #ffcd46; }
   body #container {
