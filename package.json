@@ -1,5 +1,5 @@
 {
-  "name": "poke",
+  "name": "fetch_a_pokemon",
   "version": "1.0.0",
   "description": "",
   "main": "src/main.js",
