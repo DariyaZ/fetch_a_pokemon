@@ -1,8 +1,8 @@
 function Pokemon(props) {
 	return (
 		<div className='pokemon_container'>
-			<p className='name'>{props.name}</p>
-			<img src={props.image}/>
+			<h1 className='name'>{props.name}</h1>
+			<img src={props.image} alt={`pokemon ${props.name}`}/>
 		</div>
 	)
 }
@@ -18,12 +18,14 @@ class App extends React.Component {
 	}
 
 	componentDidMount() {
-		fetch(`https://pokeapi.co/api/v2/pokemon/${Math.floor(Math.random() * 807)}/`)
+		const pokemonId = 1 + Math.floor(Math.random() * 807);
+
+		fetch(`https://pokeapi.co/api/v2/pokemon/${pokemonId}/`)
 		.then(data => data.json())
-		.then((poke) => this.setState({
-			name: poke.name,
-			image: poke.sprites.front_default
-		}));
+		.then((response) => this.setState({
+			name: response.name,
+			image: response.sprites.front_default
+		}))
 	}
 
 	render() {
